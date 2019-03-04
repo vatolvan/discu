@@ -5,7 +5,8 @@
   "author": "Ville Tolvanen",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html -p 3000 --open --no-cache"
+    "start": "parcel ./src/index.html -p 3000 --open --no-cache",
+    "eslint": "./node_modules/eslint/bin/eslint.js src/**/*"
   },
   "dependencies": {
     "react": "^16.8.3",

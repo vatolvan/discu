@@ -5,15 +5,21 @@ const { useState } = React;
 const App = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
-  function increment() {
+  function increment(): void {
     setCount(count + 1);
   }
 
-  function decrement() {
+  function decrement(): void {
     setCount(count - 1);
   }
 
-  return <div>{count}</div>;
+  return (
+    <React.Fragment>
+      <button onClick={decrement}>-</button>
+      <div>{count}</div>
+      <button onClick={increment}>-</button>
+    </React.Fragment>
+  );
 };
 
 export default App;
