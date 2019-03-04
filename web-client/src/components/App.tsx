@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 const { useState } = React;
 
@@ -13,8 +13,7 @@ const App = (): JSX.Element => {
     setCount(count - 1);
   }
 
-  return (<div>
-    {count}</div>);
-}
+  return <div>{count}</div>;
+};
 
 export default App;
