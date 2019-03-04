@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import Counter from "./Counter/Counter";
+
 const { useState } = React;
 
 const App = (): JSX.Element => {
@@ -13,13 +15,7 @@ const App = (): JSX.Element => {
     setCount(count - 1);
   }
 
-  return (
-    <React.Fragment>
-      <button onClick={decrement}>-</button>
-      <div>{count}</div>
-      <button onClick={increment}>-</button>
-    </React.Fragment>
-  );
+  return <Counter count={count} increment={increment} decrement={decrement} />;
 };
 
 export default App;

@@ -5,8 +5,8 @@
   "author": "Ville Tolvanen",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html -p 3000 --open --no-cache",
-    "eslint": "./node_modules/eslint/bin/eslint.js src/**/*"
+    "start": "parcel ./src/index.html -p 3000 --no-cache",
+    "eslint": "./node_modules/eslint/bin/eslint.js src/ --ext .tsx --ext .js --ext .ts --ext .jsx"
   },
   "dependencies": {
     "react": "^16.8.3",
@@ -22,6 +22,7 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-ts": "^2.0.2",
     "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
     "parcel-bundler": "^1.11.0",
     "prettier": "^1.16.4",
     "typescript": "^3.3.3333"
