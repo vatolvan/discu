@@ -1,0 +1,20 @@
+{
+  "name": "discu-react-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ville Tolvanen",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.html -p 3000 --open --no-cache"
+  },
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "parcel-bundler": "^1.11.0",
+    "typescript": "^3.3.3333"
+  }
+}
