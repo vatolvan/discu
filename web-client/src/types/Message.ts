@@ -1,4 +1,5 @@
 export interface Message {
-  writer: string,
-  text: string,
+  time: number
+  writer: string
+  text: string
 }

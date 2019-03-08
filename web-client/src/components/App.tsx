@@ -1,15 +1,21 @@
-import * as React from "react";
-import Messages from "./Messages/Messages";
-import SendMessage from "./SendMessage/SendMessage";
+import * as React from 'react'
+
+import Firebase, {
+  FirebaseContext,
+} from '../containers/contexts/FirebaseContext'
+import Discu from '../containers/discu/discu'
+import Auth from '../containers/auth/Auth'
 
 const App: React.SFC = (): JSX.Element => {
-  return (
-    <div>
-      <h1>DISCU</h1>
-      <Messages />
-      <SendMessage />
-    </div>
-  );
-};
+  const firebase = new Firebase()
 
-export default App;
+  return (
+    <FirebaseContext.Provider value={firebase}>
+      <Auth>
+        <Discu />
+      </Auth>
+    </FirebaseContext.Provider>
+  )
+}
+
+export default App

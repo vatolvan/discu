@@ -1,27 +1,35 @@
-const path = require('path');
+const path = require('path')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: {
+    index: './src/index.tsx',
+  },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    plugins: [new TsconfigPathsPlugin()],
   },
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.min.js'
+    filename: '[name].min.js',
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
-      }
-    ]
+        loader: 'awesome-typescript-loader',
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: './src/index.html',
+    }),
+  ],
 }
