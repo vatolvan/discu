@@ -8,4 +8,5 @@ Chat application with a Firebase backend / data storage
 
 # Usage
 
+- Clone the repo
 - Go to the relevant subdirectory, e.g. if you want to try the TypeScript + React webclient, go to ```web-client``` directory
